@@ -1,6 +1,11 @@
 import React from "react";
 // import { Container } from "semantic-ui-react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 // Wrapper
 import Wrapper from "./components/Wrapper";
@@ -20,7 +25,7 @@ function App() {
             <Header />
             <Switch>
               <Route path="/" exact>
-                <AboutPage />
+                <Redirect to="/about" />
               </Route>
               <Route path="/about" exact>
                 <AboutPage />
