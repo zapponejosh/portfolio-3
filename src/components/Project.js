@@ -13,7 +13,7 @@ function Project({ projectData }) {
 
   return (
     <Card>
-      <Image src={img} wrapped ui={false} />
+      <Image src={process.env.PUBLIC_URL + img} wrapped ui={false} />
 
       <Card.Content header={name} />
       <Card.Content description={description} />

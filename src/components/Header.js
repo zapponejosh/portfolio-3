@@ -10,7 +10,13 @@ function Header() {
   return (
     <Menu stackable>
       <Menu.Item name="logo" onClick={handleItemClick}>
-        <Image id="logo" src="/logo.png" alt="Josh" as={NavLink} to="/" />
+        <Image
+          id="logo"
+          src={process.env.PUBLIC_URL + "/logo.png"}
+          alt="Josh"
+          as={NavLink}
+          to="/"
+        />
       </Menu.Item>
 
       <Menu.Item

@@ -6,7 +6,12 @@ function AboutPage() {
   return (
     <Container id="about-page">
       <h3 className="section-title">Allow me to introduce myself</h3>
-      <Image id="about-image" src="Images/hero-img.png" size="small" circular />
+      <Image
+        id="about-image"
+        src={process.env.PUBLIC_URL + "/Images/hero-img.png"}
+        size="small"
+        circular
+      />
 
       <div className="about-body">
         <p>
