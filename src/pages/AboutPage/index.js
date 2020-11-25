@@ -1,10 +1,13 @@
 import React from "react";
+import { Container, Image } from "semantic-ui-react";
 import "./style.css";
 
 function AboutPage() {
   return (
-    <div id="about-page">
+    <Container id="about-page">
       <h3 className="section-title">Allow me to introduce myself</h3>
+      <Image id="about-image" src="Images/hero-img.png" size="small" circular />
+
       <div className="about-body">
         <p>
           I am an enthusiastic and resourceful full-stack developer who wants to
@@ -54,13 +57,8 @@ function AboutPage() {
           shows with my wife (Ted Lasso at the moment), baking bread, or far
           away in the woods with my camera.
         </p>
-
-        <p>
-          If you are hiring a web developer, please fill out the contact form
-          below! I&apos;d love to hear from you.
-        </p>
       </div>
-    </div>
+    </Container>
   );
 }
 

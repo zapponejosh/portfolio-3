@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Menu } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Menu, Image } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 function Header() {
@@ -7,19 +7,19 @@ function Header() {
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
-  useEffect(() => {}, [activeItem]);
-
   return (
     <Menu stackable>
-      <Menu.Item>
-        <img id="logo" src="/logo.png" alt="Josh" />
+      <Menu.Item name="logo" onClick={handleItemClick}>
+        <Image id="logo" src="/logo.png" alt="Josh" as={NavLink} to="/" />
       </Menu.Item>
 
       <Menu.Item
         as={NavLink}
         to="/about"
         name="about"
-        active={activeItem === "about"}
+        active={
+          activeItem === "about" || activeItem === null || activeItem === "logo"
+        }
         onClick={handleItemClick}
       >
         About
